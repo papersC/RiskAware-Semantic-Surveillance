@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1,horizontal sep=1.25cm},width=0.34\textwidth,height=4.3cm,grid=major,grid style={gray!25},
+ tick label style={font=\scriptsize},label style={font=\footnotesize},every axis plot/.append style={mark size=1.5pt},legend columns=7,legend style={font=\scriptsize,draw=none,column sep=6pt}]
+\nextgroupplot[xlabel={Evaluation correlation},ylabel={CVaR$_{0.95}$},title={\footnotesize (a)},legend to name=robleg]
+\addplot[blue!75!black,thick,mark=*] coordinates {(0.0,0.1976)(0.2,0.2174)(0.4,0.2439)(0.6,0.2776)(0.8,0.3214)};
+\addlegendentry{RAS-G}
+\addplot[cyan!60!black,mark=o] coordinates {(0.0,0.2074)(0.2,0.2302)(0.4,0.2600)(0.6,0.2971)(0.8,0.3445)};
+\addlegendentry{RN-G}
+\addplot[teal!70!black,mark=triangle*] coordinates {(0.0,0.2294)(0.2,0.2584)(0.4,0.2918)(0.6,0.3304)(0.8,0.3780)};
+\addlegendentry{ADD-G}
+\addplot[orange!85!black,mark=diamond*] coordinates {(0.0,0.3021)(0.2,0.3152)(0.4,0.3325)(0.6,0.3545)(0.8,0.3828)};
+\addlegendentry{JRRA-A}
+\addplot[violet!80!black,mark=pentagon*] coordinates {(0.0,0.2576)(0.2,0.2744)(0.4,0.2976)(0.6,0.3280)(0.8,0.3684)};
+\addlegendentry{LASP-F}
+\addlegendimage{blue!75!black,densely dotted,mark=*,mark options={solid,fill=white}}\addlegendentry{RAS-G (matched)}
+\nextgroupplot[xlabel={Test severity $\kappa_d$ (trained at 1)},ylabel={CVaR$_{0.95}$},title={\footnotesize (b)}]
+\addplot[blue!75!black,thick,mark=*] coordinates {(1.0,0.2236)(1.5,0.2955)(2.0,0.3677)(2.5,0.4428)};
+\addplot[cyan!60!black,mark=o] coordinates {(1.0,0.2393)(1.5,0.2972)(2.0,0.3666)(2.5,0.4389)};
+\addplot[orange!85!black,mark=diamond*] coordinates {(1.0,0.3161)(1.5,0.4131)(2.0,0.5429)(2.5,0.6321)};
+\addplot[violet!80!black,mark=pentagon*] coordinates {(1.0,0.2897)(1.5,0.3524)(2.0,0.4043)(2.5,0.4741)};
+\addplot[blue!75!black,densely dotted,mark=*,mark options={solid,fill=white}] coordinates {(1.0,0.2213)(1.5,0.2848)(2.0,0.3397)(2.5,0.4152)};
+\nextgroupplot[xlabel={Training scenarios $|\hat{\mathcal S}|$},ylabel={CVaR$_{0.95}$},xmode=log,log basis x=10,title={\footnotesize (c)},xtick={25,50,100,200,500},xticklabels={25,50,100,200,500}]
+\addplot[blue!75!black,thick,mark=*,error bars/.cd,y dir=both,y explicit] coordinates {(25,0.3119) +- (0,0.0481)(50,0.2649) +- (0,0.0405)(100,0.2579) +- (0,0.0451)(200,0.2546) +- (0,0.0446)(300,0.2493) +- (0,0.0440)(500,0.2406) +- (0,0.0409)};
+\end{groupplot}
+\end{tikzpicture}
+\\[1mm]\ref{robleg}

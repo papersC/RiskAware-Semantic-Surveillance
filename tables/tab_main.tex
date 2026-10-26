@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\caption{Results at $\rho=1$ (mean $\pm$ 95\% CI, 15 topologies)}
+\label{tab:main}
+\centering\footnotesize
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Method & Recall (M1) & CVaR$_{0.95}$ (M2) & Worst zone (M3) & Mb/s (M4) & Time (s)\\ \midrule
+RAS-G & \textbf{0.911}$\pm$0.017 & \textbf{0.244}$\pm$0.042 & \textbf{0.826}$\pm$0.062 & 57.4 & 1.93 \\
+RN-G & 0.905$\pm$0.015 & 0.260$\pm$0.040 & 0.822$\pm$0.061 & 39.8 & 1.18 \\
+NOM-G & 0.882$\pm$0.014 & 0.402$\pm$0.044 & 0.749$\pm$0.055 & 36.2 & 0.64 \\
+ADD-G & 0.870$\pm$0.019 & 0.292$\pm$0.042 & 0.795$\pm$0.055 & 23.7 & 1.20 \\
+JRRA-A & 0.908$\pm$0.017 & 0.333$\pm$0.049 & 0.788$\pm$0.069 & 141.2 & 0.02 \\
+LASP-F & 0.904$\pm$0.016 & 0.298$\pm$0.037 & 0.791$\pm$0.061 & 60.0 & 0.00 \\
+\midrule
+RAS-G$^\dagger$ & 0.912$\pm$0.016 & 0.234$\pm$0.042 & 0.832$\pm$0.057 & 57.4 & n/a \\
+RN-G$^\dagger$ & 0.906$\pm$0.015 & 0.250$\pm$0.043 & 0.827$\pm$0.058 & 39.8 & n/a \\
+JRRA-A$^\dagger$ & 0.911$\pm$0.017 & 0.300$\pm$0.049 & 0.798$\pm$0.066 & 141.2 & n/a \\
+ORACLE$^\dagger$ & 0.926$\pm$0.011 & 0.149$\pm$0.044 & 0.883$\pm$0.047 & n/a & n/a \\
+\bottomrule
+\multicolumn{6}{@{}l}{\scriptsize $^\dagger$First 100 test scenarios per topology. M4 is provisioned bandwidth.}
+\end{tabular}
+\end{table*}

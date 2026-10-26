@@ -1,0 +1,19 @@
+\begin{table}[t]
+\caption{Ablation at $\rho=1$ (change relative to RAS-G)}
+\label{tab:ablation}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Variant & $\Delta$M1 & $\Delta$M2 & $\Delta$M3 & $\Delta$M4 (Mb/s)\\ \midrule
+No CVaR term ($\lambda=0$) & $-0.006$ & $+0.016$$^{*}$ & $-0.004$ & $-17.7$ \\
+Additive surrogate & $-0.041$ & $+0.048$$^{*}$ & $-0.031$ & $-33.7$ \\
+Shortest route only & $-0.025$ & $+0.159$$^{*}$ & $-0.065$ & $-13.6$ \\
+Full mode only & $+0.006$ & $+0.049$$^{*}$ & $-0.002$ & $+65.0$ \\
+Nominal scenario only & $-0.029$ & $+0.158$$^{*}$ & $-0.077$ & $-21.2$ \\
+Static survival ratio & $+0.004$ & $+0.004$ & $-0.002$ & $+22.9$ \\
+Gain rule only & $+0.000$ & $+0.002$ & $+0.000$ & $+1.7$ \\
+\bottomrule
+\multicolumn{5}{@{}l}{\scriptsize $^{*}$Wilcoxon signed-rank $p<0.05$ for $\Delta$M2 over 15 topologies.}
+\end{tabular}
+\end{table}

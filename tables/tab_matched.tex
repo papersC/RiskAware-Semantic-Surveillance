@@ -1,0 +1,16 @@
+\begin{table}[t]
+\caption{Matched-budget comparison at $\rho=1$ (mean over 15 topologies)}
+\label{tab:matched}
+\centering\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Method & Recall & CVaR$_{0.95}$ & Mb/s & GPU \\ \midrule
+RAS-G (unconstrained) & \textbf{0.911} & \textbf{0.244}$\pm$0.038 & 57.4 & 11.28 \\
+RAS-G-MATCH & 0.903 & 0.250$\pm$0.036 & 39.0 & 9.24 \\
+RAS-G-MATCH-BW & 0.903 & 0.250$\pm$0.036 & 39.2 & 9.27 \\
+RAS-G-MATCH-GPU & 0.904 & 0.249$\pm$0.037 & 39.3 & 9.27 \\
+RN-G & 0.905 & 0.260$\pm$0.037 & 39.8 & 9.33 \\
+\bottomrule
+\end{tabular}
+\end{table}

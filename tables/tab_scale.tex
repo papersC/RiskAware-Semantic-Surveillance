@@ -1,0 +1,22 @@
+\begin{table}[t]
+\caption{Optimality gap and runtime}
+\label{tab:scale}
+\centering\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}rccccc@{}}
+\toprule
+Cameras & \multicolumn{2}{c}{Gap RAS-G} & Gap static & MILP (s) & RAS-G (s)\\
+ & $\lambda=0$ & $\lambda=1$ & $\lambda=1$ & $\lambda=1$ & $\lambda=1$\\ \midrule
+8 & 0.0022 & 0.0141 & 0.0556 & 9.2 & 0.16 \\
+12 & 0.0014 & 0.0174 & 0.0449 & 26.2 & 0.34 \\
+16 & 0.0004 & 0.0064 & 0.0196 & 59.5 & 0.54 \\
+\midrule
+24 & n/a & n/a & n/a & n/a & 1.81 \\
+48 & n/a & n/a & n/a & n/a & 10.45 \\
+72 & n/a & n/a & n/a & n/a & 22.58 \\
+96 & n/a & n/a & n/a & n/a & 43.88 \\
+\bottomrule
+\multicolumn{6}{@{}l}{\scriptsize Mean absolute gaps in loss units over 5 topologies with 60 scenarios.}\\
+\multicolumn{6}{@{}l}{\scriptsize Runtimes above 16 cameras use 300 scenarios and 3 topologies.}
+\end{tabular}
+\end{table}

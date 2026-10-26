@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=4 by 1,horizontal sep=1.2cm},width=0.27\textwidth,height=4.3cm,grid=major,grid style={gray!25},
+ tick label style={font=\scriptsize},label style={font=\footnotesize},every axis plot/.append style={mark size=1.5pt},legend columns=6,legend style={font=\scriptsize,draw=none,column sep=6pt}]
+\nextgroupplot[xlabel={Load factor $\rho$},ylabel={CVaR$_{0.95}$},title={\footnotesize (a)},legend to name=lsleg]
+\addplot[blue!75!black,thick,mark=*] coordinates {(1.0,0.2439)(2.0,0.2552)(3.0,0.2644)(4.0,0.2861)(5.0,0.3026)};
+\addlegendentry{RAS-G}
+\addplot[cyan!60!black,mark=o] coordinates {(1.0,0.2600)(2.0,0.2658)(3.0,0.2758)(4.0,0.2920)(5.0,0.3079)};
+\addlegendentry{RN-G}
+\addplot[red!75!black,mark=square*] coordinates {(1.0,0.4016)(2.0,0.3596)(3.0,0.3553)(4.0,0.3606)(5.0,0.3757)};
+\addlegendentry{NOM-G}
+\addplot[teal!70!black,mark=triangle*] coordinates {(1.0,0.2918)(2.0,0.2950)(3.0,0.3013)(4.0,0.3089)(5.0,0.3171)};
+\addlegendentry{ADD-G}
+\addplot[orange!85!black,mark=diamond*] coordinates {(1.0,0.3325)(2.0,0.3894)(3.0,0.3699)(4.0,0.4436)(5.0,0.5307)};
+\addlegendentry{JRRA-A}
+\addplot[violet!80!black,mark=pentagon*] coordinates {(1.0,0.2976)(2.0,0.3072)(3.0,0.3785)(4.0,0.4412)(5.0,0.5127)};
+\addlegendentry{LASP-F}
+\nextgroupplot[xlabel={Load factor $\rho$},ylabel={Recall (M1)},title={\footnotesize (b)}]
+\addplot[blue!75!black,thick,mark=*] coordinates {(1.0,0.9108)(2.0,0.8988)(3.0,0.8908)(4.0,0.8779)(5.0,0.8640)};
+\addplot[cyan!60!black,mark=o] coordinates {(1.0,0.9049)(2.0,0.8975)(3.0,0.8894)(4.0,0.8777)(5.0,0.8632)};
+\addplot[red!75!black,mark=square*] coordinates {(1.0,0.8816)(2.0,0.8800)(3.0,0.8798)(4.0,0.8703)(5.0,0.8535)};
+\addplot[teal!70!black,mark=triangle*] coordinates {(1.0,0.8702)(2.0,0.8656)(3.0,0.8599)(4.0,0.8537)(5.0,0.8473)};
+\addplot[orange!85!black,mark=diamond*] coordinates {(1.0,0.9077)(2.0,0.8639)(3.0,0.8416)(4.0,0.8021)(5.0,0.7248)};
+\addplot[violet!80!black,mark=pentagon*] coordinates {(1.0,0.9038)(2.0,0.9007)(3.0,0.8492)(4.0,0.8094)(5.0,0.7407)};
+\nextgroupplot[xlabel={Severity $\kappa_d$},ylabel={CVaR$_{0.95}$},title={\footnotesize (c)}]
+\addplot[blue!75!black,thick,mark=*] coordinates {(0.5,0.1695)(1.0,0.2439)(1.5,0.2851)(2.0,0.3520)(2.5,0.4045)};
+\addplot[cyan!60!black,mark=o] coordinates {(0.5,0.1903)(1.0,0.2600)(1.5,0.3005)(2.0,0.3639)(2.5,0.4184)};
+\addplot[red!75!black,mark=square*] coordinates {(0.5,0.3168)(1.0,0.4016)(1.5,0.4698)(2.0,0.5166)(2.5,0.5649)};
+\addplot[teal!70!black,mark=triangle*] coordinates {(0.5,0.2521)(1.0,0.2918)(1.5,0.3212)(2.0,0.3799)(2.5,0.4155)};
+\addplot[orange!85!black,mark=diamond*] coordinates {(0.5,0.2089)(1.0,0.3325)(1.5,0.4302)(2.0,0.5529)(2.5,0.6245)};
+\addplot[violet!80!black,mark=pentagon*] coordinates {(0.5,0.2228)(1.0,0.2976)(1.5,0.3490)(2.0,0.4143)(2.5,0.4711)};
+\nextgroupplot[xlabel={Severity $\kappa_d$},ylabel={Worst zone (M3)},title={\footnotesize (d)}]
+\addplot[blue!75!black,thick,mark=*] coordinates {(0.5,0.8645)(1.0,0.8261)(1.5,0.7655)(2.0,0.7261)(2.5,0.6897)};
+\addplot[cyan!60!black,mark=o] coordinates {(0.5,0.8648)(1.0,0.8223)(1.5,0.7849)(2.0,0.7448)(2.5,0.7028)};
+\addplot[red!75!black,mark=square*] coordinates {(0.5,0.8219)(1.0,0.7487)(1.5,0.6779)(2.0,0.6024)(2.5,0.5468)};
+\addplot[teal!70!black,mark=triangle*] coordinates {(0.5,0.8097)(1.0,0.7952)(1.5,0.7456)(2.0,0.7101)(2.5,0.6707)};
+\addplot[orange!85!black,mark=diamond*] coordinates {(0.5,0.8540)(1.0,0.7880)(1.5,0.7194)(2.0,0.6418)(2.5,0.5676)};
+\addplot[violet!80!black,mark=pentagon*] coordinates {(0.5,0.8381)(1.0,0.7912)(1.5,0.7445)(2.0,0.6865)(2.5,0.6354)};
+\end{groupplot}
+\end{tikzpicture}
+\\[1mm]\ref{lsleg}
